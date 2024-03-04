@@ -11,6 +11,7 @@
 #include <Wire.h>
 #include <Servo.h>
 #include <SoftwareSerial.h>
+#include <Adafruit_SSD1306.h>
 
 #define rxPinBT 10 //Broche 11 en tant que RX, à raccorder sur TX du HC-05
 #define txPinBT 11 //Broche 10 en tant que RX, à raccorder sur TX du HC-05
@@ -24,8 +25,15 @@
 #define encoder0PinDT 4  //DT Output B
 #define Switch 5 // Switch connection if available
 
+#define nombreDePixelsEnLargeur 128         // Taille de l'écran OLED, en pixel, au niveau de sa largeur
+#define nombreDePixelsEnHauteur 64          // Taille de l'écran OLED, en pixel, au niveau de sa hauteur
+#define brocheResetOLED         -1          // Reset de l'OLED partagé avec l'Arduino (d'où la valeur à -1, et non un numéro de pin)
+#define adresseI2CecranOLED     0x3C 
+
 Servo ServoBanc; //définition classe du servomoteur du banc
 SoftwareSerial mySerial(rxPinBT ,txPinBT); //Définition du software serial
+Adafruit_SSD1306 ecranOLED(nombreDePixelsEnLargeur, nombreDePixelsEnHauteur, &Wire, brocheResetOLED); //Définition classe écran OLED
+
 
 volatile unsigned int encoder0Pos = 0;
 
@@ -65,7 +73,9 @@ void setup() {
   pinMode(csPin, OUTPUT);           // configure chip select as output
   SPI.begin();
 
-    
+  // Initialisation de l'écran OLED
+  if(!ecranOLED.begin(SSD1306_SWITCHCAPVCC, adresseI2CecranOLED))
+    while(1);                               // Arrêt du programme (boucle infinie) si échec d'initialisation
 }
 
 void loopBT(){
