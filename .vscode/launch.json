@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "enter program name, for example ${workspaceFolder}/a.exe",
+            "program": "enter program name, for example ${workspaceFolder}/ProgrammesArduino/ProgrammePrincipal/ProgrammePrincipal.ino",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -30,26 +30,10 @@
             ]
         },
         {
-            "name": "(Windows) Attach",
-            "type": "cppvsdbg",
-            "request": "attach",
-        },
-        {
-            "name": "(Windows) Launch",
-            "type": "cppvsdbg",
-            "request": "launch",
-            "program": "enter program name, for example ${workspaceFolder}/a.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "console": "externalTerminal"
-        },
-        {
             "name": "(gdb) Attach",
             "type": "cppdbg",
             "request": "attach",
-            "program": "enter program name, for example ${workspaceFolder}/a.exe",
+            "program": "enter program name, for example ${workspaceFolder}/ProgrammesArduino/ProgrammePrincipal/ProgrammePrincipal.ino",
             "MIMode": "gdb",
             "miDebuggerPath": "/path/to/gdb",
             "setupCommands": [
