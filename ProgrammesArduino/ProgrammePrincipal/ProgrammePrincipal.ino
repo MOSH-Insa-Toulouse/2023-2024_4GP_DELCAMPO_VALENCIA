@@ -137,3 +137,5 @@ void loop()  // run over and over again
   Serial.println(Tension);                     //printing the result
   delay(100);                                     //waiting a 100 milliseconds
 }
+
+//Pov
