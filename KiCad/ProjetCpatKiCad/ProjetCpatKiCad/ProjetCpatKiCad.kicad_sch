@@ -14,225 +14,6 @@
 		(comment 4 "Opérateur CAO:")
 	)
 	(lib_symbols
-		(symbol "Chulo:MPC41050"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "MP"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "MPC41050_0_1"
-				(rectangle
-					(start -11.43 10.16)
-					(end 11.43 -12.7)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -5.08 10.16)
-					(mid 0 5.5332)
-					(end 5.08 10.16)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "MPC41050_1_1"
-				(pin passive line
-					(at -11.43 6.35 0)
-					(length 2.54)
-					(name "CS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -11.43 1.27 0)
-					(length 2.54)
-					(name "SCK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -11.43 -3.81 0)
-					(length 2.54)
-					(name "SI"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -11.43 -8.89 0)
-					(length 2.54)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 11.43 -8.89 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 11.43 -3.81 180)
-					(length 2.54)
-					(name "W"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 11.43 1.27 180)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 11.43 6.35 180)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Connector_Generic:Conn_01x06"
 			(pin_names
 				(offset 1.016) hide)
@@ -1429,6 +1210,276 @@
 				)
 			)
 		)
+		(symbol "Ecran_OLED_1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "OLED"
+				(at 2.794 -9.144 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Ecran_OLED_1_0_1"
+				(rectangle
+					(start -8.89 -2.54)
+					(end 8.89 -15.24)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Ecran_OLED_1_1_1"
+				(pin passive line
+					(at -8.89 -5.08 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -8.89 -7.62 180)
+					(length 2.54)
+					(name "+5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -8.89 -10.16 180)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -8.89 -12.7 180)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "LibCapteur:BT_HC-05"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "BT"
+				(at 3.048 -7.366 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "BT_HC-05_0_1"
+				(rectangle
+					(start -7.62 -2.54)
+					(end 7.62 -12.7)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "BT_HC-05_1_1"
+				(pin passive line
+					(at -7.62 -3.81 180)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -6.35 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -11.43 180)
+					(length 2.54)
+					(name "Rx"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -8.89 180)
+					(length 2.54)
+					(name "Tx"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "LibCapteur:Capteur"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1532,6 +1583,294 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "LibCapteur:Ecran_OLED"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "OLED"
+				(at 2.794 -9.144 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Ecran_OLED_0_1"
+				(rectangle
+					(start -8.89 -2.54)
+					(end 8.89 -15.24)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Ecran_OLED_1_1"
+				(pin passive line
+					(at -8.89 -7.62 180)
+					(length 2.54)
+					(name "+5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -8.89 -5.08 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -8.89 -10.16 180)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -8.89 -12.7 180)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "LibCapteur:EncodRot"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "ROT"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "EncodRot_0_1"
+				(rectangle
+					(start -15.24 -2.54)
+					(end 15.24 -17.78)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "EncodRot_1_1"
+				(pin passive line
+					(at -15.24 -5.08 180)
+					(length 2.54)
+					(name "CLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -7.62 180)
+					(length 2.54)
+					(name "DATA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -10.16 180)
+					(length 2.54)
+					(name "SWITCH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -12.7 180)
+					(length 2.54)
+					(name "+5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 -15.24 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2181,126 +2520,6 @@
 				)
 			)
 		)
-		(symbol "power:VCC"
-			(power)
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "VCC"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"VCC\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "VCC_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "VCC_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 	)
 	(junction
 		(at 147.32 34.29)
@@ -2345,6 +2564,12 @@
 		(uuid "3dcc657b-55a1-48e0-9667-e01e7b6b08b5")
 	)
 	(junction
+		(at 66.04 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4b213e3e-e6f6-45f6-9d88-6028436d7110")
+	)
+	(junction
 		(at 77.47 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2373,12 +2598,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "debbd565-2f96-48e1-800a-1d17f60e46da")
-	)
-	(junction
-		(at 68.58 73.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ffb07345-df31-42cc-97f8-75ebbe91f833")
 	)
 	(no_connect
 		(at 259.08 68.58)
@@ -2429,10 +2648,6 @@
 		(uuid "67028d59-8a06-418c-a904-c5f897de2237")
 	)
 	(no_connect
-		(at 205.74 66.04)
-		(uuid "6aec97ba-f667-46d8-aca3-d2516aaa5163")
-	)
-	(no_connect
 		(at 203.2 43.18)
 		(uuid "6d8b94c7-41dd-426c-808a-32df6a38bcb4")
 	)
@@ -2463,6 +2678,10 @@
 	(no_connect
 		(at 259.08 35.56)
 		(uuid "81c8e6df-c83b-4800-986a-8aaa0b525f41")
+	)
+	(no_connect
+		(at 210.82 33.02)
+		(uuid "9159b5dc-67f3-4836-ad4a-5ea2460fda8e")
 	)
 	(no_connect
 		(at 259.08 55.88)
@@ -2572,6 +2791,16 @@
 	)
 	(wire
 		(pts
+			(xy 203.2 66.04) (xy 218.44 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d2d033d-f8d8-4b7e-a0c2-cb15e1876235")
+	)
+	(wire
+		(pts
 			(xy 205.74 78.74) (xy 218.44 78.74)
 		)
 		(stroke
@@ -2632,16 +2861,6 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 151.13) (xy 154.94 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36ec12b9-3057-4e24-a956-67a08ad3d403")
-	)
-	(wire
-		(pts
 			(xy 88.9 50.8) (xy 88.9 66.04)
 		)
 		(stroke
@@ -2659,26 +2878,6 @@
 			(type solid)
 		)
 		(uuid "392bf1f6-bf67-427d-8d4c-0a87cb757556")
-	)
-	(wire
-		(pts
-			(xy 119.38 166.37) (xy 125.73 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "399d0f7c-a4b3-4a4d-8b74-2c20e2f2341e")
-	)
-	(wire
-		(pts
-			(xy 68.58 73.66) (xy 77.47 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3e307b89-6808-43a5-8398-84b904cb7ec7")
 	)
 	(wire
 		(pts
@@ -2722,16 +2921,6 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 66.04) (xy 205.74 66.04)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "486ca832-85f4-4989-b0f4-569faf9be534")
-	)
-	(wire
-		(pts
 			(xy 246.38 45.72) (xy 262.89 45.72)
 		)
 		(stroke
@@ -2772,7 +2961,7 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 73.66) (xy 68.58 73.66)
+			(xy 63.5 73.66) (xy 66.04 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2872,13 +3061,23 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 104.14) (xy 68.58 88.9)
+			(xy 66.04 104.14) (xy 66.04 88.9)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "79921c14-488a-4822-8c90-660c2320cd23")
+	)
+	(wire
+		(pts
+			(xy 66.04 73.66) (xy 77.47 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c453b85-0071-4065-9cc6-0f547e7c9031")
 	)
 	(wire
 		(pts
@@ -3002,7 +3201,7 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 104.14) (xy 68.58 104.14)
+			(xy 77.47 104.14) (xy 66.04 104.14)
 		)
 		(stroke
 			(width 0)
@@ -3012,7 +3211,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 73.66) (xy 68.58 81.28)
+			(xy 66.04 73.66) (xy 66.04 81.28)
 		)
 		(stroke
 			(width 0)
@@ -3079,6 +3278,16 @@
 			(type default)
 		)
 		(uuid "c600e000-3031-48fb-8c35-cd1f13495d0f")
+	)
+	(wire
+		(pts
+			(xy 147.32 41.91) (xy 147.32 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6fe3b8f-8b05-4302-83d8-22a101b01b63")
 	)
 	(wire
 		(pts
@@ -3577,31 +3786,9 @@
 		)
 		(uuid "ea5aa60b-a25e-41a1-9e06-c7b6f957567f")
 	)
-	(global_label "GND"
+	(global_label "ADC"
 		(shape input)
-		(at 119.38 166.37 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ae44dff0-fdf7-4fdd-a27e-337ccb7347ca")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 112.5086 166.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "VCC"
-		(shape input)
-		(at 154.94 151.13 0)
+		(at 180.34 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3609,14 +3796,36 @@
 			)
 			(justify left)
 		)
-		(uuid "f14b5cc9-c195-40e4-862d-27808a083df8")
+		(uuid "97fbeb22-db3b-4d16-b8aa-86619a6774cb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 161.5695 151.13 0)
+			(at 187.0489 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "ADC"
+		(shape input)
+		(at 203.2 66.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9eed782e-2814-4910-9f2b-4921d8e66cdc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 196.4911 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -4216,7 +4425,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 68.58 85.09 0)
+		(at 66.04 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4225,7 +4434,7 @@
 		(fields_autoplaced yes)
 		(uuid "1606a1b5-4e9e-42b2-901f-895bfa18a6bb")
 		(property "Reference" "C1"
-			(at 72.39 83.8199 0)
+			(at 69.85 83.8199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4233,8 +4442,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
-			(at 72.39 86.3599 0)
+		(property "Value" "100n"
+			(at 69.85 86.3599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4243,7 +4452,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 69.5452 88.9 0)
+			(at 67.0052 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4252,7 +4461,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 68.58 85.09 0)
+			(at 66.04 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4261,7 +4470,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 68.58 85.09 0)
+			(at 66.04 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4303,7 +4512,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "100n "
 			(at 166.37 86.3599 0)
 			(effects
 				(font
@@ -4373,7 +4582,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "1k"
 			(at 88.9 86.3599 0)
 			(effects
 				(font
@@ -4573,7 +4782,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "100k"
 			(at 146.05 59.6899 0)
 			(effects
 				(font
@@ -4643,7 +4852,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "100k"
 			(at 80.01 86.3599 0)
 			(effects
 				(font
@@ -4695,72 +4904,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 210.82 33.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5ca20c89-dc15-4322-ac65-caf5d0f5fcce")
-		(property "Reference" "#PWR01"
-			(at 210.82 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 211.201 29.972 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 210.82 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 210.82 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 210.82 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6bd03990-0c6f-47aa-a191-9be4dd5032ee")
-		)
-		(instances
-			(project "ProjetCpatKiCad"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 154.94 69.85 90)
 		(unit 1)
@@ -4778,7 +4921,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "1k"
 			(at 154.94 66.04 90)
 			(effects
 				(font
@@ -4981,34 +5124,33 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 269.24 38.1 270)
+		(lib_id "LibCapteur:Ecran_OLED")
+		(at 86.36 137.16 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7aeceab6-36f6-4bc6-92cb-37fdc9b4088d")
-		(property "Reference" "#PWR09"
-			(at 265.43 38.1 0)
+		(fields_autoplaced yes)
+		(uuid "7c6ac131-0633-4692-aa57-a8d4db8b6840")
+		(property "Reference" "OLED1"
+			(at 85.09 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 272.288 38.481 90)
+		(property "Value" "~"
+			(at 85.09 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 269.24 38.1 0)
+			(at 86.36 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5017,7 +5159,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 269.24 38.1 0)
+			(at 86.36 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5025,8 +5167,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 269.24 38.1 0)
+		(property "Description" ""
+			(at 86.36 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5034,13 +5176,22 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "8c6e2f51-17cc-4010-b5f2-0cfdc32747cd")
+		(pin ""
+			(uuid "c2e8d575-d183-4d7f-81ea-e9c7cb55a940")
+		)
+		(pin ""
+			(uuid "f2d1f396-ef6c-477d-980a-c6c8bd01ef55")
+		)
+		(pin ""
+			(uuid "58f7f9a6-8e15-4e64-a508-a42ebe192dc3")
+		)
+		(pin ""
+			(uuid "a0d69136-1a9e-4b3a-8a32-c6c7b8bfec21")
 		)
 		(instances
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR09")
+					(reference "OLED1")
 					(unit 1)
 				)
 			)
@@ -5104,72 +5255,6 @@
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 269.24 38.1 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8f135f35-7752-4de2-9437-aa297bf24c1c")
-		(property "Reference" "#FLG02"
-			(at 267.335 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 264.16 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 269.24 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 269.24 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 269.24 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "26fdf6a3-2ca2-41a2-9152-4c0541b06686")
-		)
-		(instances
-			(project "ProjetCpatKiCad"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -5373,6 +5458,69 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 147.32 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ad2ba026-dfe4-4c15-b3fd-8c6a1baf9250")
+		(property "Reference" "#PWR013"
+			(at 147.32 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 147.32 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 147.32 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c714740d-bf32-4edf-b8c6-b9f52a3636b5")
+		)
+		(instances
+			(project "ProjetCpatKiCad"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 147.32 38.1 0)
 		(unit 1)
@@ -5391,7 +5539,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "100n"
 			(at 151.13 39.3699 0)
 			(effects
 				(font
@@ -5437,6 +5585,81 @@
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "Ecran_OLED_1")
+		(lib_id "LibCapteur:Ecran_OLED")
+		(at 86.36 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c8f9949a-6a48-4288-b625-692e3ebcd40f")
+		(property "Reference" "OLED2"
+			(at 85.09 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 85.09 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "f8aa7f2a-3c1c-42a4-83e0-b2c4cdc8c618")
+		)
+		(pin "3"
+			(uuid "4d6e1bd0-e531-4e55-8042-eb5181695ba2")
+		)
+		(pin "1"
+			(uuid "d748586f-ba98-486e-a0a8-8906fdc66d1b")
+		)
+		(pin "2"
+			(uuid "8429415d-f946-4827-9b2f-57499f15ae4b")
+		)
+		(instances
+			(project "ProjetCpatKiCad"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "OLED2")
 					(unit 1)
 				)
 			)
@@ -5507,92 +5730,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Chulo:MPC41050")
-		(at 137.16 157.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d82bcde5-b6e8-4229-8e3f-633afbbbd734")
-		(property "Reference" "MP1"
-			(at 137.16 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "~"
-			(at 137.16 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Guarrempreintes:MCP41050"
-			(at 137.16 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 137.16 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "770fb72c-4f73-4321-b461-7c3cbaba166e")
-		)
-		(pin "2"
-			(uuid "370a5aee-e0d6-482d-9d83-6c6583bf67d4")
-		)
-		(pin "3"
-			(uuid "d58e99d6-2915-48ef-8b78-fb1ddaef80e0")
-		)
-		(pin "4"
-			(uuid "8fc95e5a-c987-4e13-8a3f-cbd26cca4e66")
-		)
-		(pin "5"
-			(uuid "76e44784-5072-43e1-80c4-e74c18faa1ab")
-		)
-		(pin "6"
-			(uuid "eb4ec159-0f58-40ae-a525-077a05e981a0")
-		)
-		(pin "7"
-			(uuid "7d2eb1ee-0f0e-4c54-a961-f8e281819123")
-		)
-		(pin "8"
-			(uuid "bd6eb06f-0fbc-4d88-8d84-5416ac480bd1")
-		)
-		(instances
-			(project "ProjetCpatKiCad"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "MP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 59.69 73.66 90)
 		(unit 1)
@@ -5610,7 +5747,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "10k"
 			(at 59.69 69.85 90)
 			(effects
 				(font
@@ -5742,7 +5879,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "1u"
 			(at 135.89 59.6899 0)
 			(effects
 				(font
@@ -5788,6 +5925,80 @@
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LibCapteur:BT_HC-05")
+		(at 44.45 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ea2a1d18-ef50-4cfd-9774-6cdf28afc3b8")
+		(property "Reference" "BT1"
+			(at 43.18 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 43.18 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 44.45 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 44.45 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin ""
+			(uuid "71136b1b-4804-4e49-b5cd-935ba547750b")
+		)
+		(pin ""
+			(uuid "67b44670-ec6b-4036-97b9-d034c9c6e920")
+		)
+		(pin ""
+			(uuid "f18fdb53-2236-48da-8829-0d08ef7dca6d")
+		)
+		(pin ""
+			(uuid "59636b57-e83e-4121-b6fe-ae6a6673b286")
+		)
+		(instances
+			(project "ProjetCpatKiCad"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "BT1")
 					(unit 1)
 				)
 			)
@@ -5852,6 +6063,83 @@
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "LibCapteur:EncodRot")
+		(at 139.7 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ffe24db4-74e6-423a-8022-44085da86e1a")
+		(property "Reference" "ROT1"
+			(at 138.43 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "~"
+			(at 138.43 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "e3f0f00a-29be-48bb-92cc-f7c927c2a7ba")
+		)
+		(pin "1"
+			(uuid "bfdb2f93-0f9c-4544-a8be-eabb6e041e7d")
+		)
+		(pin "3"
+			(uuid "8742f079-2eee-4ed3-8082-e1cb22c5fa66")
+		)
+		(pin "4"
+			(uuid "4fbb884e-58a3-498e-892b-fff09d0945f4")
+		)
+		(pin "2"
+			(uuid "d028516b-d286-414b-ab77-e151b76f2126")
+		)
+		(instances
+			(project "ProjetCpatKiCad"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "ROT1")
 					(unit 1)
 				)
 			)
