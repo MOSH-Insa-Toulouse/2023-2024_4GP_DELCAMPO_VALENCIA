@@ -4775,10 +4775,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5987a115-29a0-49ad-800c-7cb4f3c5cd64")
-		(property "Reference" "BT2"
-			(at 40.64 137.16 0)
+		(property "Reference" "BT"
+			(at 43.942 145.034 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4835,7 +4834,7 @@
 		(instances
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "BT2")
+					(reference "BT")
 					(unit 1)
 				)
 			)
@@ -5001,7 +5000,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LIbCapteurPCB:LTC1050"
 			(at 109.22 55.88 0)
 			(effects
 				(font
@@ -5463,10 +5462,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c8f9949a-6a48-4288-b625-692e3ebcd40f")
-		(property "Reference" "OLED2"
-			(at 82.55 135.89 0)
+		(property "Reference" "OLED"
+			(at 87.122 145.288 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5523,7 +5521,7 @@
 		(instances
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "OLED2")
+					(reference "OLED")
 					(unit 1)
 				)
 			)
@@ -5866,10 +5864,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "ffe24db4-74e6-423a-8022-44085da86e1a")
-		(property "Reference" "ROT1"
-			(at 138.43 133.35 0)
+		(property "Reference" "ROT"
+			(at 148.59 144.526 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5929,7 +5926,7 @@
 		(instances
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "ROT1")
+					(reference "ROT")
 					(unit 1)
 				)
 			)
