@@ -2092,6 +2092,19 @@
 		(layer "Edge.Cuts")
 		(uuid "ef0ee1ce-7ed7-4e9c-abb9-dc0926a9353e")
 	)
+	(gr_text "delcampo@insa-toulouse.fr\n"
+		(at 104 58.5 90)
+		(layer "B.Cu")
+		(uuid "0b559c95-77d0-44fe-83b2-65b3d15e8fc6")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom mirror)
+		)
+	)
 	(gr_text "ICSP"
 		(at 164.897 72.06 90)
 		(layer "Dwgs.User")
