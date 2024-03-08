@@ -37,12 +37,18 @@ Adafruit_SSD1306 ecranOLED(nombreDePixelsEnLargeur, nombreDePixelsEnHauteur, &Wi
 
 volatile unsigned int encoder0Pos = 0;
 
+///////////////////////////FLEX SENSOR/////////////////////////////////////////////////
+
 int pos=0, pos_max =150, pos_min=20;
 // Change these constants according to your project's design
 const float VCC = 5;      // voltage at Ardunio 5V line
 const float R_DIV = 39000.0;  // resistor used to create a voltage divider
 const float flatResistance = 31000.0; // resistance when flat
 const float bendResistance = 100000.0;  // resistance at 90 deg
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////// MCP 42100 - Potentiomètre digital /////////////////////////////
 
 const byte csPin           = 10;      // MCP42100 chip select pin
 const int  maxPositions    = 256;     // wiper can move from 0 to 255 = 256 positions
@@ -51,6 +57,10 @@ const long rAB             = 49800;   // 100k pot resistance between terminals A
 const byte rWiper          = 125;     // 125 ohms pot wiper resistance
 const byte pot0            = 0x11;    // pot0 addr // B 0001 0001
 const byte pot0Shutdown    = 0x21;  
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////// SETUP ////////////////////////////////////////////
 
 void setup() {
   pinMode(rxPinBT,INPUT);//setup BT
@@ -78,11 +88,19 @@ void setup() {
     while(1);                               // Arrêt du programme (boucle infinie) si échec d'initialisation
 }
 
+///////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////// BLUETOOTH ////////////////////////////////////////
+
 void loopBT(){
   while (mySerial.available()) {
 		Serial.print((float)mySerial.read(),"V");
 	}
 }
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////// ENCODEUR //////////////////////////////////////
 
 void doEncoder() {
   if (digitalRead(encoder0PinDT)==HIGH) {
@@ -91,6 +109,9 @@ void doEncoder() {
     encoder0Pos--;
   }
 }
+///////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////// MESURE FLEX SENSOR ///////////////////////////////////
 
 void mesureFlex() {
   // Read the ADC, and calculate voltage and resistance from it
@@ -104,6 +125,10 @@ void mesureFlex() {
   Serial.println("Bend: " + String(angle) + " degrees");
   Serial.println();
 }
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////// MCP 42100 - Potentiomètre digital /////////////////////////////
 
 void setPotWiper(int addr, int pos) {
   pos = constrain(pos, 0, 255);            // limit wiper setting to range of 0 to 255
@@ -120,6 +145,10 @@ void setPotWiper(int addr, int pos) {
   Serial.print(resistanceWB);
   Serial.println(" ohms");
 }
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////// CAPTEUR GRAPHITE ////////////////////////////////////
 
 /*
 * getVoltage() – returns the voltage on the analog input defined by
