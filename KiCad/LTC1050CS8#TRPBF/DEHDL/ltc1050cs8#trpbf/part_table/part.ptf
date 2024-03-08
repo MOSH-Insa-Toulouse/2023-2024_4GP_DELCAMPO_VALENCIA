@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'LTC1050CS8#TRPBF'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Analog Devices", "LTC1050CS8#TRPBF" (!) = "", "SOIC127P599X175-8N", "Small Outline Packages", "584-LTC1050CS8#TRPBF", "https://www.mouser.co.uk/ProductDetail/Analog-Devices/LTC1050CS8TRPBF?qs=hVkxg5c3xu%252BAz6PQseXWvA%3D%3D", "LTC1050CS8#TRPBF", "https://www.arrow.com/en/products/ltc1050cs8trpbf/analog-devices?region=nac", "Zero-Drift Amplifier Circuit 8-SO", "http://www.linear.com/docs/1770", "1.752 mm"
+END_PART
+
+END.

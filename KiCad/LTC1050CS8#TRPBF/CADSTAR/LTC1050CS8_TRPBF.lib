@@ -1,0 +1,18 @@
+.LTC1050CS8_TRPBF :1 ;Zero-Drift Amplifier Circuit 8-SO
+SOIC127P599X175-8N
+*STM IC
+*NGS
+*PLB 1="NC_1" 2="-IN" 3="+IN" 4="V-" 5="EXT CLOCK INPUT" 6="OUT" 7="V+" 8="NC_2"
+*MXP 8
+*DFN LTC1050CS8_TRPBF
+~!Manufacturer_Name (Analog Devices)
+~!Manufacturer_Part_Number (LTC1050CS8#TRPBF)
+~!Mouser Part Number (584-LTC1050CS8#TRPBF)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Analog-Devices/LTC1050CS8TRPBF?qs=hVkxg5c3xu%252BAz6PQseXWvA%3D%3D)
+~!Arrow Part Number (LTC1050CS8#TRPBF)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/ltc1050cs8trpbf/analog-devices?region=nac)
+~!Link Datasheet (http://www.linear.com/docs/1770)
+~!Height (1.752mm)
+~!3D_Model (LTC1050CS8#TRPBF)
+LTC1050CS8_TRPBF
+1.1!U 2.1!U 3.1!U 4.1!U 8.1!U 7.1!U 6.1!U 5.1!U 

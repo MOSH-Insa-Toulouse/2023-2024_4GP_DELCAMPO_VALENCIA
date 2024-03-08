@@ -1,4 +1,4 @@
-23042870804483199
+23042870823743019
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -63413,12 +63413,12 @@ Yellow 5381 Series LED
 2
 2
 LIbCapteurPCB
-LTC1050
+BT-HC05
 
 
 0
-8
-8
+4
+4
 LIbCapteurPCB
 OLED
 

@@ -1,0 +1,146 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "LTC1050CS8#TRPBF"
+   (description "Zero-Drift Amplifier Circuit 8-SO")
+   (family "ANA")
+   (package "SOIC127P599X175-8N")
+   (attribute "Datasheet Link" "http://www.linear.com/docs/1770")
+   (attribute "Geometry.Height" "1.752mm")
+   (attribute "Manufacturer_Name" "Analog Devices")
+   (attribute "Manufacturer_Part_Number" "LTC1050CS8#TRPBF")
+   (attribute "Mouser Part Number" "584-LTC1050CS8#TRPBF")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Analog-Devices/LTC1050CS8TRPBF?qs=hVkxg5c3xu%252BAz6PQseXWvA%3D%3D")
+   (attribute "Arrow Part Number" "LTC1050CS8#TRPBF")
+   (attribute "Arrow Price/Stock" "https://www.arrow.com/en/products/ltc1050cs8trpbf/analog-devices?region=nac")
+   (gate
+    (symbol "LTC1050CS8#TRPBF")
+    (pin "NC_1" 1 PS)
+    (pin "-IN" 2 PS)
+    (pin "+IN" 3 PS)
+    (pin "V-" 4 PS)
+    (pin "NC_2" 8 PS)
+    (pin "V+" 7 PS)
+    (pin "OUT" 6 PS)
+    (pin "EXT_CLOCK_INPUT" 5 PS)
+   )
+  )
+  (symbol "LTC1050CS8#TRPBF"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 1500 100) (pt 1500 -400) (pt 200 -400) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -200) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -300) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1700 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1700 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1700 -200) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1700 -300) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "SOIC127P599X175-8N"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.05)
+     (path
+      (closed true)
+      (pt -3.725 2.752)
+      (pt 3.725 2.752)
+      (pt 3.725 -2.752)
+      (pt -3.725 -2.752)
+      (pt -3.725 2.752))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -1.95 2.451)
+      (pt 1.95 2.451)
+      (pt 1.95 -2.451)
+      (pt -1.95 -2.451)
+      (pt -1.95 2.451))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -1.95 1.181)
+      (pt -0.68 2.451))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -1.6 2.451)
+      (pt 1.6 2.451)
+      (pt 1.6 -2.451)
+      (pt -1.6 -2.451)
+      (pt -1.6 2.451))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -3.475 2.58)
+      (pt -1.95 2.58))))
+   (leg 1 (pt -2.712 1.905) (padstack 0))
+   (leg 2 (pt -2.712 0.635) (padstack 0))
+   (leg 3 (pt -2.712 -0.635) (padstack 0))
+   (leg 4 (pt -2.712 -1.905) (padstack 0))
+   (leg 5 (pt 2.712 -1.905) (padstack 0))
+   (leg 6 (pt 2.712 -0.635) (padstack 0))
+   (leg 7 (pt 2.712 0.635) (padstack 0))
+   (leg 8 (pt 2.712 1.905) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 0.65 1.526 0 0 0))
+   )
+   (model "LTC1050CS8#TRPBF.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

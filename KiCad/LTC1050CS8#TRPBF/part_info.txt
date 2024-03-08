@@ -1,0 +1,9 @@
+Manufacturer=Analog Devices
+PartNumber=LTC1050CS8#TRPBF
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=8
+Version=1.1
+Released=2017-08-28 15:08:15
+Downloaded=2024-03-08 10:49:12
+3D=Y

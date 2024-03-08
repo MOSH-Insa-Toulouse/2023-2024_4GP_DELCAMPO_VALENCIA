@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LTC1050CS8#TRPBF
+D Zero-Drift Amplifier Circuit 8-SO
+K
+F http://www.linear.com/docs/1770
+$ENDCMP
+#
+#End Doc Library

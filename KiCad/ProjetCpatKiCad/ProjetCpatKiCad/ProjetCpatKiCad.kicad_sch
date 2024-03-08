@@ -1962,6 +1962,120 @@
 				)
 			)
 		)
+		(symbol "LibCapteur:FlexSensor"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Flex"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "FlexSensor_0_1"
+				(rectangle
+					(start -7.62 3.81)
+					(end 8.89 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -7.62 1.27) (xy -5.08 1.27) (xy -5.08 2.54) (xy -3.81 2.54) (xy -3.81 -1.27) (xy -2.54 -1.27)
+						(xy -2.54 2.54) (xy -1.27 2.54) (xy 6.35 2.54) (xy 6.35 -2.54) (xy 5.08 -2.54) (xy 5.08 1.27)
+						(xy 3.81 1.27) (xy 3.81 -2.54) (xy 2.54 -2.54) (xy 2.54 1.27) (xy 1.27 1.27) (xy 1.27 -2.54) (xy 0 -2.54)
+						(xy 0 1.27) (xy -1.27 1.27) (xy -1.27 -2.54) (xy -5.08 -2.54) (xy -5.08 -1.27) (xy -7.62 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "FlexSensor_1_1"
+				(pin passive line
+					(at -7.62 1.27 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -1.27 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "LibCapteur:LTC1050"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -5081,7 +5195,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5987a115-29a0-49ad-800c-7cb4f3c5cd64")
-		(property "Reference" "BT"
+		(property "Reference" "BT1"
 			(at 43.942 145.034 0)
 			(effects
 				(font
@@ -5139,7 +5253,7 @@
 		(instances
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "BT")
+					(reference "BT1")
 					(unit 1)
 				)
 			)
@@ -5305,7 +5419,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LIbCapteurPCB:LTC1050"
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm_LongPads"
 			(at 109.22 55.88 0)
 			(effects
 				(font
@@ -5759,6 +5873,76 @@
 		)
 	)
 	(symbol
+		(lib_id "LibCapteur:FlexSensor")
+		(at 105.41 176.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b95ead4a-05bf-4363-9ec7-8ab09ac49cda")
+		(property "Reference" "Flex1"
+			(at 115.57 175.8949 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 115.57 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 105.41 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 105.41 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6b17c5d5-76fe-4fe8-9150-a171e6582c7c")
+		)
+		(pin "1"
+			(uuid "cc0faea2-9e0e-44ac-b89f-f19aa17615e2")
+		)
+		(instances
+			(project "ProjetCpatKiCad"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "Flex1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "Ecran_OLED_1")
 		(lib_id "LibCapteur:Ecran_OLED")
 		(at 83.82 137.16 0)
@@ -5768,7 +5952,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c8f9949a-6a48-4288-b625-692e3ebcd40f")
-		(property "Reference" "OLED"
+		(property "Reference" "OLED1"
 			(at 87.122 145.288 0)
 			(effects
 				(font
@@ -5826,7 +6010,7 @@
 		(instances
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "OLED")
+					(reference "OLED1")
 					(unit 1)
 				)
 			)
@@ -6170,7 +6354,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ffe24db4-74e6-423a-8022-44085da86e1a")
-		(property "Reference" "ROT"
+		(property "Reference" "ROT1"
 			(at 148.59 144.526 0)
 			(effects
 				(font
@@ -6231,7 +6415,7 @@
 		(instances
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "ROT")
+					(reference "ROT1")
 					(unit 1)
 				)
 			)
