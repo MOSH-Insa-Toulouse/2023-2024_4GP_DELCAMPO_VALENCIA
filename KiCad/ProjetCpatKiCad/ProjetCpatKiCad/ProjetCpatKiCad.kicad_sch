@@ -4647,7 +4647,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 67.0052 88.9 0)
 			(effects
 				(font
@@ -4717,7 +4717,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 163.5252 88.9 0)
 			(effects
 				(font
@@ -4787,7 +4787,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 84.582 85.09 90)
 			(effects
 				(font
@@ -4855,7 +4855,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LIbCapteurPCB:DigiPot"
 			(at 143.51 172.72 0)
 			(effects
 				(font
@@ -5073,7 +5073,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 141.732 58.42 90)
 			(effects
 				(font
@@ -5143,7 +5143,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 75.692 85.09 90)
 			(effects
 				(font
@@ -5211,7 +5211,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LIbCapteurPCB:BT-HC05"
 			(at 41.91 138.43 0)
 			(effects
 				(font
@@ -5285,7 +5285,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 154.94 71.628 90)
 			(effects
 				(font
@@ -5830,7 +5830,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 148.2852 41.91 0)
 			(effects
 				(font
@@ -5900,7 +5900,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LIbCapteurPCB:FlexSensor"
 			(at 105.41 176.53 0)
 			(effects
 				(font
@@ -6106,7 +6106,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 59.69 75.438 90)
 			(effects
 				(font
@@ -6239,7 +6239,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 133.0452 62.23 0)
 			(effects
 				(font

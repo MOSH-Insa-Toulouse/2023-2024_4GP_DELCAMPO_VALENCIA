@@ -1,4 +1,4 @@
-23042870823743019
+23046291193130493
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -63419,6 +63419,20 @@ BT-HC05
 0
 4
 4
+LIbCapteurPCB
+DigiPot
+
+
+0
+8
+8
+LIbCapteurPCB
+FlexSensor
+
+
+0
+2
+2
 LIbCapteurPCB
 OLED
 
