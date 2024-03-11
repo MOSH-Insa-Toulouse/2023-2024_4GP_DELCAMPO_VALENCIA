@@ -3,8 +3,8 @@
 	(generator "pcbnew")
 	(generator_version "8.0")
 	(layer "F.Cu")
-	(property "Reference" "REF**"
-		(at 0 2.5 0)
+	(property "Reference" "OLED**"
+		(at 8.34 0.02 0)
 		(unlocked yes)
 		(layer "F.SilkS")
 		(uuid "39259f59-a744-4c23-ba39-47caee300a8e")
@@ -153,6 +153,58 @@
 		)
 		(layer "F.CrtYd")
 		(uuid "c5e72faa-5433-44d5-8c8a-19c7d48d9a7f")
+	)
+	(fp_text user "SCL"
+		(at 0.55 2.24 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "6b9abcfc-d4c1-456c-9b05-5e8ec86a4920")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "GND"
+		(at -4.65 -1.57 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "72626e50-a5bb-4218-8949-0401c639e4a2")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "SDA"
+		(at 3.07 2.26 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "8aa00a9c-0d1a-464d-962a-475192e4cf82")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "VCC"
+		(at -1.96 2.26 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "be533506-cff9-4e39-96b2-e47c84446b11")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
 	)
 	(pad "1" thru_hole rect
 		(at -3.81 0)
