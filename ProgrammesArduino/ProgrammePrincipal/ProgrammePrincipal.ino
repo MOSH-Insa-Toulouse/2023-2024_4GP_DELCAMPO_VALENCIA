@@ -36,6 +36,8 @@ Adafruit_SSD1306 ecranOLED(nombreDePixelsEnLargeur, nombreDePixelsEnHauteur, &Wi
 
 
 volatile unsigned int encoder0Pos = 0;
+int lignecursor = 0;
+int n=0;
 
 ///////////////////////////FLEX SENSOR/////////////////////////////////////////////////
 
@@ -77,6 +79,9 @@ void setup() {
   pinMode(encoder0PinDT, INPUT); 
   digitalWrite(encoder0PinDT, HIGH);       // turn on pullup resistor
 
+  pinMode(Switch, INPUT);
+  digitalWrite(Switch, HIGH); 
+
   attachInterrupt(0, doEncoder, RISING); // encoder pin on interrupt 0 - pin2
 
   digitalWrite(csPin, HIGH);        // chip select default to de-selected
@@ -102,12 +107,34 @@ void loopBT(){
 
 /////////////////////////////////////// ENCODEUR //////////////////////////////////////
 
+
 void doEncoder() {
   if (digitalRead(encoder0PinDT)==HIGH) {
     encoder0Pos++;
+    n++;
+    if (n>200){
+      ecranOLED.setTextColor(SSD1306_WHITE);
+     ecranOLED.setCursor(lignecursor++, 0); 
+     ecranOLED.setTextColor(SSD1306_BLACK, SSD1306_WHITE);
+     
+     n=0;
+    }
   } else {
     encoder0Pos--;
+    n++;
+    if (n>200){
+    ecranOLED.setTextColor(SSD1306_WHITE);
+    ecranOLED.setCursor(lignecursor--, 0); 
+    ecranOLED.setTextColor(SSD1306_BLACK, SSD1306_WHITE);
+    
+    n=0;
+    }
   }
+  if (lignecursor>3)
+    lignecursor=1;
+  if (lignecursor<1)
+    lignecursor=3;
+  return lignecursor;
 }
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -162,7 +189,42 @@ float getVoltage(int pin) {
 
 void loop()  // run over and over again
 {
-  float Tension = getVoltage(ampliPin);  //getting the voltage reading from the temperature sensor
-  Serial.println(Tension);                     //printing the result
-  delay(100);                                     //waiting a 100 milliseconds
+
+  ecranOLED.clearDisplay(); 
+  ecranOLED.setTextSize(3);
+  ecranOLED.setCursor(0, 0); 
+  ecranOLED.print("Bonjour"); 
+  ecranOLED.display();                            // Transfert le buffer à l'écran
+  delay(2000); 
+  while(1){ 
+  ecranOLED.clearDisplay(); 
+  ecranOLED.setTextSize(1);
+  ecranOLED.setTextColor(SSD1306_WHITE);
+  ecranOLED.setCursor(0, 0);  
+  ecranOLED.println("Selectionnez le mode d'utilisation:");
+  if (lignecursor==1 || lignecursor==0){ecranOLED.setTextColor(SSD1306_BLACK, SSD1306_WHITE);}
+  ecranOLED.println("Mesure");
+  ecranOLED.setTextColor(SSD1306_WHITE);
+  if (lignecursor==2){ecranOLED.setTextColor(SSD1306_BLACK, SSD1306_WHITE);}
+  ecranOLED.println("Calibrage Resistance"); 
+  ecranOLED.setTextColor(SSD1306_WHITE);
+  if (lignecursor==3){ecranOLED.setTextColor(SSD1306_BLACK, SSD1306_WHITE);}
+  ecranOLED.println("Pilotage Bluetooth");              
+  ecranOLED.display();  
+  if(! digitalRead (Switch)){
+  switch(lignecursor){
+    case(1):
+    float Tension = getVoltage(ampliPin);
+    ecranOLED.clearDisplay(); 
+    ecranOLED.setTextSize(2);
+    ecranOLED.setCursor(0, 0);  
+    ecranOLED.println(Tension);
+        //getting the voltage reading from the temperature sensor
+    Serial.println(Tension);                     //printing the result
+    delay(100);  
+    case(2):{}
+    case(3):{}
+  }
+  }
+  }                                   //waiting a 100 milliseconds
 }
