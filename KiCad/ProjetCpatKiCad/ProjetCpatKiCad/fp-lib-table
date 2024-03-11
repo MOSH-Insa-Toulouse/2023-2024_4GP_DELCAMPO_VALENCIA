@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "Arduino_MountingHole")(type "KiCad")(uri "${KICAD7_TEMPLATE_DIR}/Arduino_Mega/Arduino_MountingHole.pretty")(options "")(descr ""))
   (lib (name "KiCad")(type "KiCad")(uri "C:/Users/ignac/OneDrive/Documents/INSA/2023-2024_4GP_DELCAMPO_VALENCIA/KiCad/LTC1050CS8#TRPBF/KiCad.pretty")(options "")(descr ""))
+  (lib (name "LIbCapteurPCB")(type "KiCad")(uri "C:/Users/ignac/OneDrive/Documents/INSA/2023-2024_4GP_DELCAMPO_VALENCIA/KiCad/ProjetCpatKiCad/LIbCapteurPCB.pretty")(options "")(descr ""))
 )
