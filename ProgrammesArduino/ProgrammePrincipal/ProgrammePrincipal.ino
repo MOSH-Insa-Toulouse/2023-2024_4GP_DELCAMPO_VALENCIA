@@ -13,6 +13,8 @@
 #include <SoftwareSerial.h>
 #include <Adafruit_SSD1306.h>
 
+#define DEBUG
+
 #define rxPinBT 10 //Broche 11 en tant que RX, à raccorder sur TX du HC-05
 #define txPinBT 11 //Broche 10 en tant que RX, à raccorder sur TX du HC-05
 
@@ -38,6 +40,15 @@ Adafruit_SSD1306 ecranOLED(nombreDePixelsEnLargeur, nombreDePixelsEnHauteur, &Wi
 volatile unsigned int encoder0Pos = 0;
 int lignecursor = 0;
 int n=0;
+int page=0;
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////// MCP 42100 - Potentiomètre digital /////////////////////////////
+
+byte serialRX; // variable de reception de donnée via RX
+byte serialTX; // variable de transmission de données via TX
+volatile byte RX = 0;
 
 ///////////////////////////FLEX SENSOR/////////////////////////////////////////////////
 
@@ -54,9 +65,9 @@ const float bendResistance = 100000.0;  // resistance at 90 deg
 
 const byte csPin           = 10;      // MCP42100 chip select pin
 const int  maxPositions    = 256;     // wiper can move from 0 to 255 = 256 positions
-const long rAB             = 49800;   // 100k pot resistance between terminals A and B, 
+const long rAB             = 46400;   // 100k pot resistance between terminals A and B, 
                                       // mais pour ajuster au multimètre, je mets 92500
-const byte rWiper          = 125;     // 125 ohms pot wiper resistance
+const byte rWiper          = 150;     // 125 ohms pot wiper resistance
 const byte pot0            = 0x11;    // pot0 addr // B 0001 0001
 const byte pot0Shutdown    = 0x21;  
 
@@ -97,10 +108,9 @@ void setup() {
 
 //////////////////////////////////// BLUETOOTH ////////////////////////////////////////
 
-void loopBT(){
-  while (mySerial.available()) {
-		Serial.print((float)mySerial.read(),"V");
-	}
+void serialEvent(){ // si arduino reçoit quelquechose sur l'entrée RX
+  serialRX = Serial.read(); // stocker la valeur reçue dans la variable SerialA 
+  RX = 1; //met la valeur RX à 1
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -109,10 +119,11 @@ void loopBT(){
 
 
 void doEncoder() {
+  if (!page){
   if (digitalRead(encoder0PinDT)==HIGH) {
     encoder0Pos++;
     n++;
-    if (n>200){
+    if (n>100){
       ecranOLED.setTextColor(SSD1306_WHITE);
      ecranOLED.setCursor(lignecursor++, 0); 
      ecranOLED.setTextColor(SSD1306_BLACK, SSD1306_WHITE);
@@ -122,7 +133,7 @@ void doEncoder() {
   } else {
     encoder0Pos--;
     n++;
-    if (n>200){
+    if (n>100){
     ecranOLED.setTextColor(SSD1306_WHITE);
     ecranOLED.setCursor(lignecursor--, 0); 
     ecranOLED.setTextColor(SSD1306_BLACK, SSD1306_WHITE);
@@ -134,8 +145,30 @@ void doEncoder() {
     lignecursor=1;
   if (lignecursor<1)
     lignecursor=3;
-  return lignecursor;
+    
+}else{
+  if (digitalRead(encoder0PinDT)==HIGH) {
+    encoder0Pos++;
+    n++;
+    if (n>50){
+      setPotWiper(pot0,pos++);
+      n=0;
+    }
+  } else {
+    encoder0Pos--;
+    n++;
+    if (n>50){
+      setPotWiper(pot0,pos--);
+      n=0;
+    }
+  }
+  if (pos>255)
+    pos=0;
+  if (pos<0)
+    pos=255;
+    
 }
+} 
 ///////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////// MESURE FLEX SENSOR ///////////////////////////////////
@@ -157,7 +190,7 @@ void mesureFlex() {
 
 /////////////////////// MCP 42100 - Potentiomètre digital /////////////////////////////
 
-void setPotWiper(int addr, int pos) {
+long setPotWiper(int addr, int pos) {
   pos = constrain(pos, 0, 255);            // limit wiper setting to range of 0 to 255
   digitalWrite(csPin, LOW);                // select chip
   SPI.transfer(addr);                      // configure target pot with wiper position
@@ -171,6 +204,7 @@ void setPotWiper(int addr, int pos) {
   Serial.print(" Resistance wiper to B terminal: ");
   Serial.print(resistanceWB);
   Serial.println(" ohms");
+  return resistanceWB;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -189,14 +223,9 @@ float getVoltage(int pin) {
 
 void loop()  // run over and over again
 {
-
-  ecranOLED.clearDisplay(); 
-  ecranOLED.setTextSize(3);
-  ecranOLED.setCursor(0, 0); 
-  ecranOLED.print("Bonjour"); 
-  ecranOLED.display();                            // Transfert le buffer à l'écran
-  delay(2000); 
-  while(1){ 
+  lignecursor=1;
+  while(1){
+  Serial.println(lignecursor); 
   ecranOLED.clearDisplay(); 
   ecranOLED.setTextSize(1);
   ecranOLED.setTextColor(SSD1306_WHITE);
@@ -209,22 +238,67 @@ void loop()  // run over and over again
   ecranOLED.println("Calibrage Resistance"); 
   ecranOLED.setTextColor(SSD1306_WHITE);
   if (lignecursor==3){ecranOLED.setTextColor(SSD1306_BLACK, SSD1306_WHITE);}
-  ecranOLED.println("Pilotage Bluetooth");              
+  ecranOLED.println("Pilotage Bluetooth"); 
+  ecranOLED.setTextColor(SSD1306_WHITE);             
   ecranOLED.display();  
-  if(! digitalRead (Switch)){
-  switch(lignecursor){
-    case(1):
-    float Tension = getVoltage(ampliPin);
-    ecranOLED.clearDisplay(); 
-    ecranOLED.setTextSize(2);
-    ecranOLED.setCursor(0, 0);  
-    ecranOLED.println(Tension);
-        //getting the voltage reading from the temperature sensor
-    Serial.println(Tension);                     //printing the result
-    delay(100);  
-    case(2):{}
-    case(3):{}
+  if(!digitalRead (Switch)){
+    delay(500);
+    switch(lignecursor){
+      case(1):                        //Menu de affichage de tension
+        while(digitalRead (Switch))
+        {
+    
+          float Tension = getVoltage(ampliPin);//getting the voltage reading from the temperature sensor
+          float VFlex = getVoltage(flexSensorPin);
+          ecranOLED.clearDisplay(); 
+          ecranOLED.setTextSize(2);
+          ecranOLED.setCursor(0, 0);  
+          ecranOLED.println(Tension);
+          ecranOLED.println(VFlex);
+          ecranOLED.display();  
+        
+          Serial.println(Tension);
+          Serial.println(VFlex);                     //printing the result
+          delay(100);
+          
+        }
+        break;
+      case(2):                                // Menu de modification du potentiomètre
+        page=1;                     
+        while(digitalRead (Switch))
+        {
+    
+          float Rpot = setPotWiper(pot0, pos);//getting the voltage reading from the temperature sensor
+          ecranOLED.clearDisplay(); 
+          ecranOLED.setTextSize(2);
+          ecranOLED.setCursor(0, 0);  
+          ecranOLED.println(Rpot);
+          ecranOLED.display();  
+        
+          Serial.println(Rpot);                     //printing the result
+          delay(100);
+          
+        }
+        break;
+      case(3):                         //Menu de pilotage par BT
+        while(digitalRead (Switch))
+        {
+          ecranOLED.clearDisplay(); 
+          ecranOLED.setTextSize(1);
+          ecranOLED.setCursor(0, 0);  
+          //ecranOLED.println("Connectez vous au module BT05-23");
+          if(0){ecranOLED.println("Connecte");}
+          else{ecranOLED.println("Non Connecte");}
+          ecranOLED.display();                      //printing the result
+          delay(100);
+        
+          
+        }
+        break;
+      delay(200);
+    }
+
   }
-  }
-  }                                   //waiting a 100 milliseconds
+  page=0;   
+  }                                
 }
