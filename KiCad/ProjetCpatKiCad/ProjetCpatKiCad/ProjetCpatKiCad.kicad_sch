@@ -6532,7 +6532,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm_LongPads"
+		(property "Footprint" "LIbCapteurPCB:LTC1050"
 			(at 109.22 55.88 0)
 			(effects
 				(font
@@ -7077,7 +7077,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LIbCapteurPCB:FlexSensor"
+		(property "Footprint" "LIbCapteurPCB:F_SENSE"
 			(at 58.42 176.53 0)
 			(effects
 				(font
