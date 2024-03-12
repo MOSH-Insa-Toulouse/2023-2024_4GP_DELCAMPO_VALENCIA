@@ -2818,6 +2818,10 @@
 		(uuid "5f13fd83-4232-49ca-b1c1-e16c8b8ee845")
 	)
 	(no_connect
+		(at 153.67 168.91)
+		(uuid "5f7a561f-4e97-42c8-a812-24a5b9f6e97f")
+	)
+	(no_connect
 		(at 203.2 43.18)
 		(uuid "6d8b94c7-41dd-426c-808a-32df6a38bcb4")
 	)
@@ -2834,6 +2838,10 @@
 		(uuid "77ddc539-cf92-4f62-987c-dbb0916fa6e1")
 	)
 	(no_connect
+		(at 132.08 180.34)
+		(uuid "78d6d466-5b91-442d-894e-b2ccbb60eb81")
+	)
+	(no_connect
 		(at 205.74 73.66)
 		(uuid "7feac099-edab-4dfb-8e30-7a17a90fbfbf")
 	)
@@ -2842,20 +2850,12 @@
 		(uuid "806ddd95-b095-4452-887f-5466a13d9ceb")
 	)
 	(no_connect
-		(at 262.89 48.26)
-		(uuid "87c5026e-d645-4a15-b4b2-1bdf562ea396")
-	)
-	(no_connect
 		(at 259.08 45.72)
 		(uuid "898398ee-0283-406e-98f7-1fca9d4be48f")
 	)
 	(no_connect
 		(at 210.82 33.02)
 		(uuid "9159b5dc-67f3-4836-ad4a-5ea2460fda8e")
-	)
-	(no_connect
-		(at 259.08 43.18)
-		(uuid "badaddf1-c37c-4e15-9bc8-f588dad4e3a7")
 	)
 	(no_connect
 		(at 218.44 38.1)
@@ -2908,16 +2908,6 @@
 			(type default)
 		)
 		(uuid "06340ba8-aaae-4162-9c7b-7661a15c9e5c")
-	)
-	(wire
-		(pts
-			(xy 246.38 50.8) (xy 262.89 50.8)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "09480ba4-37da-45e3-b9fe-6beebf876349")
 	)
 	(wire
 		(pts
@@ -3781,6 +3771,16 @@
 	)
 	(wire
 		(pts
+			(xy 246.38 50.8) (xy 262.89 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec2b0185-0b36-480e-a7c3-9708f8f56148")
+	)
+	(wire
+		(pts
 			(xy 246.38 76.2) (xy 259.08 76.2)
 		)
 		(stroke
@@ -3821,7 +3821,7 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 43.18) (xy 259.08 43.18)
+			(xy 246.38 43.18) (xy 262.89 43.18)
 		)
 		(stroke
 			(width 0)
@@ -4275,7 +4275,7 @@
 	)
 	(global_label "F-2"
 		(shape input)
-		(at 203.2 68.58 180)
+		(at 203.2 66.04 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4285,7 +4285,7 @@
 		)
 		(uuid "1a1c719f-d6ee-4b42-b701-e9a5a4d6b951")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 196.2492 68.58 0)
+			(at 196.2492 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4374,6 +4374,28 @@
 		(uuid "57dc00bd-669e-4ff2-9f2b-7001047c9429")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 278.4284 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "M-3: SI"
+		(shape input)
+		(at 262.89 48.26 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6057cf3c-0294-49f1-928c-b320a255f3e3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 273.5903 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4517,7 +4539,7 @@
 	)
 	(global_label "ADC"
 		(shape input)
-		(at 203.2 66.04 180)
+		(at 203.2 68.58 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4527,7 +4549,7 @@
 		)
 		(uuid "9eed782e-2814-4910-9f2b-4921d8e66cdc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 196.4911 66.04 0)
+			(at 196.4911 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4704,6 +4726,28 @@
 		(uuid "e44705fb-1337-4b02-99d4-61148dfb7950")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 164.0074 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "M-2: SCK"
+		(shape input)
+		(at 262.89 43.18 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ec0423d2-f7d3-4bd1-87fd-ce176aaa2f85")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 275.5255 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5442,7 +5486,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal"
 			(at 67.0052 88.9 0)
 			(effects
 				(font
@@ -5512,7 +5556,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal"
 			(at 163.5252 88.9 0)
 			(effects
 				(font
@@ -5582,7 +5626,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical"
 			(at 84.582 85.09 90)
 			(effects
 				(font
@@ -5995,7 +6039,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical"
 			(at 141.732 58.42 90)
 			(effects
 				(font
@@ -6129,7 +6173,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical"
 			(at 75.692 85.09 90)
 			(effects
 				(font
@@ -6271,7 +6315,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical"
 			(at 154.94 71.628 90)
 			(effects
 				(font
@@ -6308,70 +6352,6 @@
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 153.67 168.91 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6ba62b48-8987-4937-b00f-7ee5aba974be")
-		(property "Reference" "#PWR020"
-			(at 149.86 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 156.718 169.2656 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 153.67 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 153.67 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 153.67 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8b1b5378-f382-4412-8d24-1984bfbe1553")
-		)
-		(instances
-			(project "ProjetCpatKiCad"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -7007,7 +6987,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_THT:C_Rect_L4.6mm_W5.5mm_P2.50mm_MKS02_FKP02"
 			(at 148.2852 41.91 0)
 			(effects
 				(font
@@ -7346,7 +7326,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical"
 			(at 59.69 75.438 90)
 			(effects
 				(font
@@ -7383,69 +7363,6 @@
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 132.08 180.34 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e0b756e3-df4f-4be8-9a2b-aa7abe1fab07")
-		(property "Reference" "#PWR021"
-			(at 125.73 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 128.27 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 132.08 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c9d3ec08-1900-4d0b-ab85-f20ebd2ad67a")
-		)
-		(instances
-			(project "ProjetCpatKiCad"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -7542,7 +7459,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Capacitor_THT:C_Axial_L3.8mm_D2.6mm_P7.50mm_Horizontal"
 			(at 133.0452 62.23 0)
 			(effects
 				(font
