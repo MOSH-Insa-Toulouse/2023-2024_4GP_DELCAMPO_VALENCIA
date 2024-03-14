@@ -13,10 +13,11 @@
 #include <SoftwareSerial.h>
 #include <Adafruit_SSD1306.h>
 
+
 #define DEBUG
 
-#define rxPinBT 10 //Broche 11 en tant que RX, à raccorder sur TX du HC-05
-#define txPinBT 11 //Broche 10 en tant que RX, à raccorder sur TX du HC-05
+#define rxPinBT 9 //Broche 9 en tant que RX, à raccorder sur TX du HC-05
+#define txPinBT 8 //Broche 10 en tant que TX, à raccorder sur TX du HC-05
 
 #define ampliPin 0 //Broche A0 qui récupère Vout de l'amplificateur
 #define flexSensorPin 1 //Broche A1 qui récupère Vout du flex sensor
@@ -44,13 +45,15 @@ int page=0;
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
-/////////////////////// MCP 42100 - Potentiomètre digital /////////////////////////////
+//////////////////////////////////// BLUETOOTH ////////////////////////////////////////
+
 
 byte serialRX; // variable de reception de donnée via RX
 byte serialTX; // variable de transmission de données via TX
-volatile byte RX = 0;
+volatile byte RX = 0; 
 
-///////////////////////////FLEX SENSOR/////////////////////////////////////////////////
+///////////////////////////FLEX SENSOR/////////////////////
+////////////////////////////
 
 int pos=0, pos_max =150, pos_min=20;
 // Change these constants according to your project's design
@@ -225,6 +228,7 @@ void loop()  // run over and over again
 {
   lignecursor=1;
   while(1){
+    if (!page){
   Serial.println(lignecursor); 
   ecranOLED.clearDisplay(); 
   ecranOLED.setTextSize(1);
@@ -240,7 +244,7 @@ void loop()  // run over and over again
   if (lignecursor==3){ecranOLED.setTextColor(SSD1306_BLACK, SSD1306_WHITE);}
   ecranOLED.println("Pilotage Bluetooth"); 
   ecranOLED.setTextColor(SSD1306_WHITE);             
-  ecranOLED.display();  
+  ecranOLED.display(); 
   if(!digitalRead (Switch)){
     delay(500);
     switch(lignecursor){
@@ -287,18 +291,33 @@ void loop()  // run over and over again
           ecranOLED.setTextSize(1);
           ecranOLED.setCursor(0, 0);  
           //ecranOLED.println("Connectez vous au module BT05-23");
-          if(0){ecranOLED.println("Connecte");}
+          if(mySerial.available()){ecranOLED.println("Connecte");}
           else{ecranOLED.println("Non Connecte");}
           ecranOLED.display();                      //printing the result
           delay(100);
+          if (RX){
+            RX=0;  
+            Serial.println(serialRX); 
+            switch (serialRX) {
+            case 1: // si arduino reçois le chiffre 1 alors
+              
+              break;
+            case 2: // si arduino reçois le chiffre 2 alors
+              
+              break;
+            case 3: // si arduino reçois le chiffre 3 alors "clignote"
+              RX = 1;
+            }
+  }
         
           
         }
         break;
-      delay(200);
+      
     }
-
+    page=0;
+    delay(500);
+    } 
+    }                                
   }
-  page=0;   
-  }                                
 }
