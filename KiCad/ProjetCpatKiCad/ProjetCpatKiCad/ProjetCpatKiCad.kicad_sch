@@ -2772,12 +2772,6 @@
 		(uuid "5130313e-4051-4d45-af28-a90b83e75cdd")
 	)
 	(junction
-		(at 86.36 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "63c1269d-744d-4188-b468-d34a4de9e282")
-	)
-	(junction
 		(at 77.47 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2951,16 +2945,6 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 88.9) (xy 86.36 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1442e52a-fd17-488f-9164-d2b1d0fec7c0")
-	)
-	(wire
-		(pts
 			(xy 215.9 50.8) (xy 215.9 53.34)
 		)
 		(stroke
@@ -3128,16 +3112,6 @@
 			(type default)
 		)
 		(uuid "460fa44c-ea12-4690-82c0-7db35a7b235f")
-	)
-	(wire
-		(pts
-			(xy 107.95 104.14) (xy 86.36 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4df32ca5-af68-41db-8a2c-9f6e361108b8")
 	)
 	(wire
 		(pts
@@ -3481,6 +3455,16 @@
 	)
 	(wire
 		(pts
+			(xy 246.38 55.88) (xy 262.89 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b081ab41-08cf-4146-bd86-533c1bd34a26")
+	)
+	(wire
+		(pts
 			(xy 86.36 73.66) (xy 93.98 73.66)
 		)
 		(stroke
@@ -3791,7 +3775,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 104.14) (xy 77.47 104.14)
+			(xy 77.47 104.14) (xy 107.95 104.14)
 		)
 		(stroke
 			(width 0)
@@ -3888,16 +3872,6 @@
 			(type solid)
 		)
 		(uuid "fc39c32d-65b8-4d16-9db5-de89c54a1206")
-	)
-	(wire
-		(pts
-			(xy 246.38 55.88) (xy 262.89 55.88)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "fe837306-92d0-4847-ad21-76c47ae932d1")
 	)
 	(text "* Indicates a PWM-capable pin"
 		(exclude_from_sim no)
@@ -4449,28 +4423,6 @@
 			)
 		)
 	)
-	(global_label "M-6: W"
-		(shape input)
-		(at 86.36 88.9 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "773e4080-500a-4055-8e25-f4715573db9b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.6974 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "O-4: SDA"
 		(shape input)
 		(at 203.2 76.2 180)
@@ -4731,28 +4683,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "M-6: W"
-		(shape input)
-		(at 153.67 176.53 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e44705fb-1337-4b02-99d4-61148dfb7950")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 164.0074 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -6604,6 +6534,69 @@
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 153.67 176.53 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8fa4b328-01cf-4831-a108-c5a048d28737")
+		(property "Reference" "#PWR019"
+			(at 160.02 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 157.48 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 153.67 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 153.67 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 153.67 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bcd14d7f-1205-406c-bd5e-0407ac210f1c")
+		)
+		(instances
+			(project "ProjetCpatKiCad"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
