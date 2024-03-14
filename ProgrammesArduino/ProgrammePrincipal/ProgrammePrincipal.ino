@@ -83,7 +83,7 @@ void setup() {
   pinMode(txPinBT,OUTPUT);  
   mySerial.begin(baudrate);
   Serial.begin(baudrate);
-
+  
   pinMode(flexSensorPin, INPUT);//setup flexsensor
   ServoBanc.attach(9); //setup servo
 
@@ -107,14 +107,7 @@ void setup() {
     while(1);                               // Arrêt du programme (boucle infinie) si échec d'initialisation
 }
 
-///////////////////////////////////////////////////////////////////////////////////////
 
-//////////////////////////////////// BLUETOOTH ////////////////////////////////////////
-
-void serialEvent(){ // si arduino reçoit quelquechose sur l'entrée RX
-  serialRX = Serial.read(); // stocker la valeur reçue dans la variable SerialA 
-  RX = 1; //met la valeur RX à 1
-}
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -229,7 +222,7 @@ void loop()  // run over and over again
   lignecursor=1;
   while(1){
     if (!page){
-  Serial.println(lignecursor); 
+  //Serial.println(lignecursor); 
   ecranOLED.clearDisplay(); 
   ecranOLED.setTextSize(1);
   ecranOLED.setTextColor(SSD1306_WHITE);
@@ -293,20 +286,20 @@ void loop()  // run over and over again
           //ecranOLED.println("Connectez vous au module BT05-23");
           if(mySerial.available()){ecranOLED.println("Connecte");}
           else{ecranOLED.println("Non Connecte");}
-          ecranOLED.display();                      //printing the result
-          delay(100);
+          ecranOLED.display();                  //printing the result
           if (RX){
+            
             RX=0;  
-            Serial.println(serialRX); 
+             
             switch (serialRX) {
             case 1: // si arduino reçois le chiffre 1 alors
-              
+              Serial.println("hola");
               break;
             case 2: // si arduino reçois le chiffre 2 alors
-              
+              Serial.println(RX);
               break;
-            case 3: // si arduino reçois le chiffre 3 alors "clignote"
-              RX = 1;
+            case 3: // si arduino reçois le chiffre 3 alors 
+             break;
             }
   }
         
@@ -320,4 +313,14 @@ void loop()  // run over and over again
     } 
     }                                
   }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////// BLUETOOTH ////////////////////////////////////////
+
+void serialEvent(){ // si arduino reçoit quelquechose sur l'entrée RX
+  serialRX = mySerial.read(); // stocker la valeur reçue dans la variable SerialA 
+  RX = 1; //met la valeur RX à 1
 }
