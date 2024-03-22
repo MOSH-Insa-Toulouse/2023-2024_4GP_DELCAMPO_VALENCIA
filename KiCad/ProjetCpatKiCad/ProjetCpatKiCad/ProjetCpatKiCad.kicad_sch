@@ -366,6 +366,123 @@
 				)
 			)
 		)
+		(symbol "Chulo:Servo"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SV"
+				(at 0 6.096 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Servo_0_1"
+				(rectangle
+					(start -2.54 5.08)
+					(end 2.54 -6.35)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Servo_1_1"
+				(pin passive line
+					(at -2.54 2.54 0)
+					(length 2.54)
+					(name "Dig"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 -1.27 0)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 -5.08 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Connector_Generic:Conn_01x06"
 			(pin_names
 				(offset 1.016) hide)
@@ -2784,10 +2901,6 @@
 		(uuid "a4cc4a21-7c74-4d06-8ddd-0017e846f70c")
 	)
 	(no_connect
-		(at 259.08 68.58)
-		(uuid "0b0dbc4c-59d4-4386-a9ed-68d5427aedf0")
-	)
-	(no_connect
 		(at 118.11 57.15)
 		(uuid "0d8f51d3-8f62-4c31-a186-d119e03e2271")
 	)
@@ -2965,6 +3078,16 @@
 	)
 	(wire
 		(pts
+			(xy 95.25 176.53) (xy 99.06 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "214f35c7-8600-49c0-933c-eab0e8d3988e")
+	)
+	(wire
+		(pts
 			(xy 132.08 172.72) (xy 135.89 172.72)
 		)
 		(stroke
@@ -3065,6 +3188,16 @@
 	)
 	(wire
 		(pts
+			(xy 246.38 55.88) (xy 262.89 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f910066-6281-4136-a521-ba7cd67a211a")
+	)
+	(wire
+		(pts
 			(xy 151.13 168.91) (xy 153.67 168.91)
 		)
 		(stroke
@@ -3115,7 +3248,7 @@
 	)
 	(wire
 		(pts
-			(xy 246.38 68.58) (xy 259.08 68.58)
+			(xy 246.38 68.58) (xy 262.89 68.58)
 		)
 		(stroke
 			(width 0)
@@ -3262,6 +3395,16 @@
 			(type default)
 		)
 		(uuid "756e93c3-7b49-49ce-baa2-b752e986683d")
+	)
+	(wire
+		(pts
+			(xy 95.25 172.72) (xy 99.06 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78cbe992-7240-4efb-ac6d-2532a19021e7")
 	)
 	(wire
 		(pts
@@ -3415,6 +3558,16 @@
 	)
 	(wire
 		(pts
+			(xy 95.25 180.34) (xy 99.06 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0f5bbaa-595c-4c44-a154-d8bcea272e42")
+	)
+	(wire
+		(pts
 			(xy 55.88 49.53) (xy 55.88 73.66)
 		)
 		(stroke
@@ -3452,16 +3605,6 @@
 			(type solid)
 		)
 		(uuid "aab97e46-23d6-4cbf-8684-537b94306d68")
-	)
-	(wire
-		(pts
-			(xy 246.38 55.88) (xy 262.89 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b081ab41-08cf-4146-bd86-533c1bd34a26")
 	)
 	(wire
 		(pts
@@ -4423,6 +4566,28 @@
 			)
 		)
 	)
+	(global_label "Dig"
+		(shape input)
+		(at 95.25 172.72 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7a025c8f-a2ce-414f-a93a-33f2b9c388f6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 89.1459 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "O-4: SDA"
 		(shape input)
 		(at 203.2 76.2 180)
@@ -4722,6 +4887,28 @@
 		(uuid "ec0423d2-f7d3-4bd1-87fd-ce176aaa2f85")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.5255 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Dig"
+		(shape input)
+		(at 262.89 68.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f11a0585-ee11-42c1-ae4e-e3bb85eb785e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 268.9941 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5853,6 +6040,70 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
+		(at 95.25 176.53 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "482a6421-8f7a-4801-b50f-174a31db1510")
+		(property "Reference" "#PWR021"
+			(at 99.06 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 92.202 176.1744 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 95.25 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "36ec3729-d09c-44a2-8f36-f885e2254ecf")
+		)
+		(instances
+			(project "ProjetCpatKiCad"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
 		(at 66.04 144.78 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6256,6 +6507,69 @@
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 95.25 180.34 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6bda1a5e-1386-4045-aceb-74338cd31166")
+		(property "Reference" "#PWR020"
+			(at 88.9 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 95.25 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4ebbfd4b-40fb-4984-baf5-2693f33b304b")
+		)
+		(instances
+			(project "ProjetCpatKiCad"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -7198,6 +7512,79 @@
 			(project "ProjetCpatKiCad"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "OLED1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Chulo:Servo")
+		(at 101.6 175.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d0341f6d-8a0c-49f2-a249-5c84f14d3983")
+		(property "Reference" "SV1"
+			(at 105.41 175.2599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 105.41 177.165 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "ChuloPCB:SIP-3"
+			(at 101.6 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fe228647-82d2-47fa-8720-be8115162270")
+		)
+		(pin "3"
+			(uuid "9f98181f-3f7d-47aa-838c-5f9d212f65fd")
+		)
+		(pin "2"
+			(uuid "b80ac233-7069-4ffb-8319-61b8e7952131")
+		)
+		(instances
+			(project "ProjetCpatKiCad"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(reference "SV1")
 					(unit 1)
 				)
 			)

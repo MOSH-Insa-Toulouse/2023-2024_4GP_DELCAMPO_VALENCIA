@@ -1,0 +1,223 @@
+(footprint "SIP-3"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "SV**"
+		(at -6 0 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "9fbc3f04-f58c-4c69-8672-af2cf170585d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Servo"
+		(at 0 -2.77 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "766496ca-7464-4c4c-81ae-ca6a911eb3e8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a0cd8683-4530-4946-9d96-dd7f71e33c0a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f29a552a-c5d7-4ef3-8b62-a406d3f5afec")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3ea73f19-dfd0-489c-aba2-d14bdc3eddf2")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -4.04 -1.77)
+		(end 4.04 -1.77)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "719ca875-23a4-4771-a21e-ee5f54124fbc")
+	)
+	(fp_line
+		(start -4.04 1.77)
+		(end -4.04 -1.77)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "e2346010-0938-496e-b2d8-bf49b1cd9ed3")
+	)
+	(fp_line
+		(start -1.27 -1.77)
+		(end -1.27 1.77)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "efe54a26-f3b8-4145-88b7-f85f432756c1")
+	)
+	(fp_line
+		(start 4.04 -1.77)
+		(end 4.04 1.77)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "835bffd6-9694-4b1c-bf9c-38fc62ffd6b9")
+	)
+	(fp_line
+		(start 4.04 1.77)
+		(end -4.04 1.77)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "79957d33-5c1e-4a4d-a02e-c8a019abaf61")
+	)
+	(fp_line
+		(start -3.79 -1.52)
+		(end 3.79 -1.52)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "5d42c51e-c095-447c-8df8-64bd978d9a29")
+	)
+	(fp_line
+		(start -3.79 1.52)
+		(end -3.79 -1.52)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "a476b77e-cd9e-4c3e-a20c-e7baa186643b")
+	)
+	(fp_line
+		(start 3.79 -1.52)
+		(end 3.79 1.52)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "2f0a8844-010a-4e0c-8cd1-22921145609a")
+	)
+	(fp_line
+		(start 3.79 1.52)
+		(end -3.79 1.52)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "21bd2fbf-63b9-47b5-be2b-526efb4e33fe")
+	)
+	(fp_text user "Dig"
+		(at -4 2.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "5c535e64-49cf-47ce-8d4e-ac3ad5637511")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "GND"
+		(at 1.5 2.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "903cec0b-05c7-4fdd-ae94-03ffc1ad9b03")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "VCC"
+		(at -1.5 2.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "e32584a7-51d6-4b08-bc27-2e3f005c3f3b")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at -2.54 0)
+		(size 2 2.54)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "893e8cb7-bd64-413b-bfa3-e8aea71634db")
+	)
+	(pad "2" thru_hole oval
+		(at 0 0)
+		(size 2 2.54)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "58f78bc8-dddb-4af0-ae0c-abf79b7fb40d")
+	)
+	(pad "3" thru_hole oval
+		(at 2.54 0)
+		(size 2 2.54)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(thermal_bridge_angle 45)
+		(uuid "3b336f41-becb-424a-b241-88c737df74d3")
+	)
+)
