@@ -292,14 +292,19 @@ void loop()  // run over and over again
             RX=0;  
              
             switch (serialRX) {
-            case 1: // si arduino reçois le chiffre 1 alors
-              Serial.println("hola");
+            case 1: // si arduino reçois le chiffre 1 alors envoi de la position du potentiomètre
+              mySerial.println(pos);
               break;
-            case 2: // si arduino reçois le chiffre 2 alors
-              Serial.println(RX);
+            case 2: // si arduino reçois le chiffre 2 alors envoi de la tension en sortie de l'a
+              mySerial.println(map(0,1024,0,255,analogRead(ampliPin)));
               break;
-            case 3: // si arduino reçois le chiffre 3 alors 
-             break;
+            case 3: // si arduino reçois le chiffre 3 alors incrément de la position du potentiomètre
+            setPotWiper(pot0,pos++);
+            mySerial.println(pos);
+             break; 
+            case 4: // si arduino reçois le chiffre 4 alors décrément de la position du potentiomètre
+            setPotWiper(pot0,pos--);
+            mySerial.println(pos); 
             }
   }
         
