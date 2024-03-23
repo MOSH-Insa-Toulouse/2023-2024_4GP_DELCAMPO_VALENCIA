@@ -18,6 +18,11 @@
 ## Livrables
 
 Les livrables pour ce projet sont :
+ - [ ] Code arduino permettant la mesure de la résistance du capteur et pilotage des composants ( BT, Potentiomètre, OLED)
+ - [ ] PCB du Shield Arduino
+ - [ ] APK android pour le pilotage du système via smartphone
+ - [ ] Datasheet du capteur de graphite
+ - [ ] Banc de test pour étude du capteur sous différents types de grpahite ( 2B, HB,etc...)
 
 ## Matériel
 
