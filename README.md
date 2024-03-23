@@ -1,4 +1,4 @@
-﻿# Projet Capteur 
+﻿# **Projet Capteur**
 
 ## Introduction 
 
@@ -22,9 +22,20 @@ Les livrables pour ce projet sont :
  - [ ] PCB du Shield Arduino
  - [ ] APK android pour le pilotage du système via smartphone
  - [ ] Datasheet du capteur de graphite
- - [ ] Banc de test pour étude du capteur sous différents types de grpahite ( 2B, HB,etc...)
+ - [ ] Banc de test pour étude du capteur sous différents types de grpahite ( 2B, HB, etc...)
 
 ## Matériel
+
+ - 1 carte Arduino UNO
+ - 1 écran OLED
+ - 1 AOP LTC1050
+ - 1 Potentiomètre digital MCP-41050
+ - 1 Module Bluetooth HC-05
+ - 1 Encodeur Rotatoire KY-040
+ - Résistances (X2 100kOhm, X1 1kOhm)
+ - Condensateurs (X2 100nF, X1 1uF)
+ - Crayons (HB, 2B,...)
+ - Modèle papier pour capteur
 
 ## PCB Shield
 
