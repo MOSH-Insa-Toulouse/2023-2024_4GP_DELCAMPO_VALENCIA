@@ -115,18 +115,18 @@ void setup() {
 
 
 void doEncoder() {
-  if (!page){
-  if (digitalRead(encoder0PinDT)==HIGH) {
+  if (!page){    //dans le menu principal
+  if (digitalRead(encoder0PinDT)==HIGH) {   //SI on tourne l'encodeur vers la droite la position est incrémenté
     encoder0Pos++;
     n++;
-    if (n>100){
+    if (n>100){  //lorsque la position augmente de 100, le curseur du menu descend
       ecranOLED.setTextColor(SSD1306_WHITE);
      ecranOLED.setCursor(lignecursor++, 0); 
      ecranOLED.setTextColor(SSD1306_BLACK, SSD1306_WHITE);
      
      n=0;
     }
-  } else {
+  } else {   //lorsque la position diminue de 100, le curseur du menu monte
     encoder0Pos--;
     n++;
     if (n>100){
@@ -137,20 +137,20 @@ void doEncoder() {
     n=0;
     }
   }
-  if (lignecursor>3)
+  if (lignecursor>3)  // si valeur max ou min de la page est dépasée on passe à l'autre côté du menu
     lignecursor=1;
   if (lignecursor<1)
     lignecursor=3;
     
-}else{
-  if (digitalRead(encoder0PinDT)==HIGH) {
+}else{                                        // dans le menu du potentiomètre
+  if (digitalRead(encoder0PinDT)==HIGH) {     //si on tourne encodeur à droite, valeur du potentiomètre augmente
     encoder0Pos++;
     n++;
-    if (n>50){
+    if (n>50){                               // incrément de valeur du potentiomètre après 50 incréments de position de l'encodeur
       setPotWiper(pot0,pos++);
       n=0;
     }
-  } else {
+  } else {                                   //décrément de valeur du potentiomètre après 50 décréments de position de l'encodeur
     encoder0Pos--;
     n++;
     if (n>50){
@@ -158,7 +158,7 @@ void doEncoder() {
       n=0;
     }
   }
-  if (pos>255)
+  if (pos>255)                               // // si valeur max ou min du potentiomètre est dépasée on passe à la valeur opposée        
     pos=0;
   if (pos<0)
     pos=255;
@@ -221,7 +221,8 @@ void loop()  // run over and over again
 {
   lignecursor=1;
   while(1){
-    if (!page){
+    if (!page){                  
+  //affichage du menu principal
   //Serial.println(lignecursor); 
   ecranOLED.clearDisplay(); 
   ecranOLED.setTextSize(1);
@@ -238,7 +239,7 @@ void loop()  // run over and over again
   ecranOLED.println("Pilotage Bluetooth"); 
   ecranOLED.setTextColor(SSD1306_WHITE);             
   ecranOLED.display(); 
-  if(!digitalRead (Switch)){
+  if(!digitalRead (Switch)){       //appuie du bouton --> on va vers la page souhaitée
     delay(500);
     switch(lignecursor){
       case(1):                        //Menu de affichage de tension
@@ -265,11 +266,11 @@ void loop()  // run over and over again
         while(digitalRead (Switch))
         {
     
-          float Rpot = setPotWiper(pot0, pos);//getting the voltage reading from the temperature sensor
+          float Rpot = setPotWiper(pot0, pos);//prennant valeur du potentiomètre
           ecranOLED.clearDisplay(); 
           ecranOLED.setTextSize(2);
           ecranOLED.setCursor(0, 0);  
-          ecranOLED.println(Rpot);
+          ecranOLED.println(Rpot); //affichage de la valeur du potentiomètre
           ecranOLED.display();  
         
           Serial.println(Rpot);                     //printing the result
@@ -277,15 +278,15 @@ void loop()  // run over and over again
           
         }
         break;
-      case(3):                         //Menu de pilotage par BT
+      case(3):                         //Menu de pilotage par BT sur l'app
         while(digitalRead (Switch))
         {
           ecranOLED.clearDisplay(); 
           ecranOLED.setTextSize(1);
           ecranOLED.setCursor(0, 0);  
           //ecranOLED.println("Connectez vous au module BT05-23");
-          if(mySerial.available()){ecranOLED.println("Connecte");}
-          else{ecranOLED.println("Non Connecte");}
+          if(mySerial.available()){ecranOLED.println("BT Disponible");}
+          else{ecranOLED.println("BT Non Disponible");}
           ecranOLED.display();                  //printing the result
           if (RX){
             
@@ -295,16 +296,16 @@ void loop()  // run over and over again
             case 1: // si arduino reçois le chiffre 1 alors envoi de la position du potentiomètre
               mySerial.println(pos);
               break;
-            case 2: // si arduino reçois le chiffre 2 alors envoi de la tension en sortie de l'a
+            case 2: // si arduino reçois le chiffre 2 alors envoi de la tension en sortie de l'amplificateur sur 256 bits (1octet)
               mySerial.println(map(0,1024,0,255,analogRead(ampliPin)));
               break;
             case 3: // si arduino reçois le chiffre 3 alors incrément de la position du potentiomètre
-            setPotWiper(pot0,pos++);
-            mySerial.println(pos);
+              setPotWiper(pot0,pos++);
+              mySerial.println(pos);
              break; 
             case 4: // si arduino reçois le chiffre 4 alors décrément de la position du potentiomètre
-            setPotWiper(pot0,pos--);
-            mySerial.println(pos); 
+              setPotWiper(pot0,pos--);
+              mySerial.println(pos); 
             }
   }
         
@@ -326,6 +327,6 @@ void loop()  // run over and over again
 //////////////////////////////////// BLUETOOTH ////////////////////////////////////////
 
 void serialEvent(){ // si arduino reçoit quelquechose sur l'entrée RX
-  serialRX = mySerial.read(); // stocker la valeur reçue dans la variable SerialA 
+  serialRX = mySerial.read(); // stocker la valeur reçue dans la variable serialRX 
   RX = 1; //met la valeur RX à 1
 }
