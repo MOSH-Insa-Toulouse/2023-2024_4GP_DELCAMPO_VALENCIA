@@ -217,6 +217,7 @@ float getVoltage(int pin) {
 }
 
 
+
 void loop()  // run over and over again
 {
   lignecursor=1;
@@ -279,40 +280,24 @@ void loop()  // run over and over again
         }
         break;
       case(3):                         //Menu de pilotage par BT sur l'app
+        ecranOLED.clearDisplay(); 
+        ecranOLED.setTextSize(1);
+        ecranOLED.setCursor(0, 0);  
+        ecranOLED.println("Connectez vous au module BT05-23");
+        ecranOLED.display();
         while(digitalRead (Switch))
         {
-          ecranOLED.clearDisplay(); 
-          ecranOLED.setTextSize(1);
-          ecranOLED.setCursor(0, 0);  
-          //ecranOLED.println("Connectez vous au module BT05-23");
-          if(mySerial.available()){ecranOLED.println("BT Disponible");}
-          else{ecranOLED.println("BT Non Disponible");}
-          ecranOLED.display();                  //printing the result
-          if (RX){
-            
-            RX=0;  
-             
-            switch (serialRX) {
-            case 1: // si arduino reçois le chiffre 1 alors envoi de la position du potentiomètre
-              mySerial.println(pos);
-              break;
-            case 2: // si arduino reçois le chiffre 2 alors envoi de la tension en sortie de l'amplificateur sur 256 bits (1octet)
-              mySerial.println(map(0,1024,0,255,analogRead(ampliPin)));
-              break;
-            case 3: // si arduino reçois le chiffre 3 alors incrément de la position du potentiomètre
-              setPotWiper(pot0,pos++);
-              mySerial.println(pos);
-             break; 
-            case 4: // si arduino reçois le chiffre 4 alors décrément de la position du potentiomètre
-              setPotWiper(pot0,pos--);
-              mySerial.println(pos); 
-            }
-  }
-        
-          
-        }
-        break;
-      
+           if(mySerial.available()){
+            serialRX=mySerial.read();
+            Serial.println(serialRX); 
+            App(serialRX);
+            //ecranOLED.println("BT Disponible");
+          } 
+            //else{ecranOLED.println("BT Non Disponible");}
+
+            // stocker la valeur reçue dans la variable serialRX
+
+        }    
     }
     page=0;
     delay(500);
@@ -326,7 +311,25 @@ void loop()  // run over and over again
 
 //////////////////////////////////// BLUETOOTH ////////////////////////////////////////
 
-void serialEvent(){ // si arduino reçoit quelquechose sur l'entrée RX
-  serialRX = mySerial.read(); // stocker la valeur reçue dans la variable serialRX 
-  RX = 1; //met la valeur RX à 1
+
+void App(int serialRX){
+switch (serialRX) {
+            case(1): // si arduino reçois le chiffre 1 alors envoi de la position du potentiomètre
+              Serial.println(1); 
+              break;
+            case(2): // si arduino reçois le chiffre 2 alors envoi de la tension en sortie de l'amplificateur sur 256 bits (1octet)
+              mySerial.println(map(analogRead(ampliPin),0,1024,0,255));
+              break;
+            case(3): // si arduino reçois le chiffre 3 alors incrément de la position du potentiomètre
+              setPotWiper(pot0,pos++);
+              mySerial.println(pos);
+              Serial.println(3);
+             break; 
+            case(4): // si arduino reçois le chiffre 4 alors décrément de la position du potentiomètre
+              setPotWiper(pot0,pos--);
+              mySerial.println(pos); 
+              Serial.println(4);
+              break;
+              }
 }
+

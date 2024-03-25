@@ -17,11 +17,15 @@ Pin 10 - Ground => Ground Arduino
 
 /* ENTETE DECLARATIVE */
 //#define DEBUG
+#include <SoftwareSerial.h>
+#define rxPinBT 9 //Broche 9 en tant que RX, à raccorder sur TX du HC-05
+#define txPinBT 8 //Broche 10 en tant que TX, à raccorder sur TX du HC-05
+SoftwareSerial mySerial(rxPinBT ,txPinBT); 
 
 const int ledPin_Red = 12; // la led sera fixée à la broche 13
 const int ledPin_Green = 13; // la led sera fixée à la broche 12
 byte serialRX; // variable de reception de donnée via RX
-byte serialTX; // variable de transmission de données via TX
+byte serialTX; // variable de transmission de données via TX 
 volatile byte RX = 0; 
 boolean lastButtonState = LOW;
 boolean buttonState;
@@ -39,7 +43,9 @@ long debounceDelay = 50;    // the debounce time; increase if the output flicker
 void setup()
 {
   Serial.begin(speed_serial); // initialisation de la connexion série (avec le module bluetooth)
-  setupBlueToothConnection(); // démarrage liason série bluetooth cf fonction en bas
+  pinMode(rxPinBT,INPUT);//setup BT
+  pinMode(txPinBT,OUTPUT);  
+  mySerial.begin(speed_serial);// démarrage liason série bluetooth cf fonction en bas
 
   pinMode(ledPin_Red, OUTPUT); // fixe la pin "ledpin" en sortie
   pinMode(ledPin_Green, OUTPUT); // fixe la pin "ledpin" en sortie
@@ -63,7 +69,7 @@ void loop() {
           digitalWrite(ledPin_Green, LOW); // allume sur la broche "ledpin"
           break;
         case 3: // si arduino reçois le chiffre 3 alors "clignote"
-          RX = 1;
+          
           digitalWrite(ledPin_Red, LOW); // assure l'extinction de la LED VERTE
           digitalWrite(ledPin_Green, HIGH);
           delay(200);
@@ -105,7 +111,7 @@ lastButtonState = reading;
 
 //La fonction serialEvent est appelé après chaque boucle loop si un caractère est arrivé sur le port
 void serialEvent(){ // si arduino reçoit quelquechose sur l'entrée RX
-  serialRX = Serial.read(); // stocker la valeur reçue dans la variable SerialA 
+  serialRX = mySerial.read(); // stocker la valeur reçue dans la variable SerialA 
   RX = 1; //met la valeur RX à 1
 }
 
