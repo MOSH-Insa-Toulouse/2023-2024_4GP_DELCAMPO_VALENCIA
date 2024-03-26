@@ -96,7 +96,7 @@ void setup() {
   Serial.begin(baudrate);
   
   pinMode(flexSensorPin, INPUT);//setup flexsensor
-  ServoBanc.attach(9); //setup servo
+  //ServoBanc.attach(9); //setup servo
 
   pinMode(encoder0PinCLK, INPUT); 
   digitalWrite(encoder0PinCLK, HIGH);       // turn on pullup resistor
@@ -300,8 +300,10 @@ void loop()  // run over and over again
         ecranOLED.display();
         if(mySerial.available()){
           serialRX=mySerial.read();
-          Serial.println(serialRX); }
-        App(serialRX);
+          Serial.println(serialRX); 
+          App(serialRX);}
+        
+        
             //ecranOLED.println("BT Disponible");
           
             //else{ecranOLED.println("BT Non Disponible");}
@@ -334,12 +336,12 @@ switch (serialRX) {
             case(3): // si arduino reçois le chiffre 3 alors incrément de la position du potentiomètre
               setPotWiper(pot0,pos++);
               mySerial.write((byte)pos);
-              Serial.println(3);
+              //Serial.println(3);
              break; 
             case(4): // si arduino reçois le chiffre 4 alors décrément de la position du potentiomètre
               setPotWiper(pot0,pos--);
               mySerial.write((byte)pos); 
-              Serial.println(4);
+              //Serial.println(4);
               break;
               }
 }
