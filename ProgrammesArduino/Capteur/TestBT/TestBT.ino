@@ -2,7 +2,7 @@
 #define rxPin 9 // Broche 11 en tant que RX, à raccorder sur TX du HC-05
 #define txPin 8 // Broche 10 en tant que TX, à raccorder sur RX du HC-05
 
-byte serialRX;
+byte serialRX=1;
 volatile byte RX=0;
 SoftwareSerial mySerial(rxPin, txPin);
 void setup()

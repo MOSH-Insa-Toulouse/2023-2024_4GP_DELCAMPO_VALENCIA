@@ -39,7 +39,7 @@ Adafruit_SSD1306 ecranOLED(nombreDePixelsEnLargeur, nombreDePixelsEnHauteur, &Wi
 
 
 volatile unsigned int encoder0Pos = 0;
-int lignecursor = 0;
+int lignecursor = 1;
 int n=0;
 int page=0;
 
@@ -48,7 +48,7 @@ int page=0;
 //////////////////////////////////// BLUETOOTH ////////////////////////////////////////
 
 
-byte serialRX; // variable de reception de donnée via RX
+volatile byte serialRX; // variable de reception de donnée via RX
 byte serialTX; // variable de transmission de données via TX
 volatile byte RX = 0; 
 
@@ -73,6 +73,17 @@ const long rAB             = 46400;   // 100k pot resistance between terminals A
 const byte rWiper          = 150;     // 125 ohms pot wiper resistance
 const byte pot0            = 0x11;    // pot0 addr // B 0001 0001
 const byte pot0Shutdown    = 0x21;  
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////// Debouncing ////////////////////////////////////////
+
+// the following variables are long&#039;s because the time, measured in miliseconds,
+// will quickly become a bigger number than can be stored in an int.
+long lastDebounceTime = 0;  // the last time the output pin was toggled
+long debounceDelay = 500;    // the debounce time; increase if the output flickers
+
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -220,8 +231,7 @@ float getVoltage(int pin) {
 
 void loop()  // run over and over again
 {
-  lignecursor=1;
-  while(1){
+  
     if (!page){                  
   //affichage du menu principal
   //Serial.println(lignecursor); 
@@ -240,8 +250,11 @@ void loop()  // run over and over again
   ecranOLED.println("Pilotage Bluetooth"); 
   ecranOLED.setTextColor(SSD1306_WHITE);             
   ecranOLED.display(); 
-  if(!digitalRead (Switch)){       //appuie du bouton --> on va vers la page souhaitée
-    delay(500);
+    if(!digitalRead (Switch) && millis()-lastDebounceTime>=debounceDelay && page==0 ){  
+    lastDebounceTime=millis();
+    page=1;      //appuie du bouton --> on va vers la page souhaitée
+  }}
+  else
     switch(lignecursor){
       case(1):                        //Menu de affichage de tension
         while(digitalRead (Switch))
@@ -285,26 +298,24 @@ void loop()  // run over and over again
         ecranOLED.setCursor(0, 0);  
         ecranOLED.println("Connectez vous au module BT05-23");
         ecranOLED.display();
-        while(digitalRead (Switch))
-        {
-           if(mySerial.available()){
-            serialRX=mySerial.read();
-            Serial.println(serialRX); 
-            App(serialRX);
+        if(mySerial.available()){
+          serialRX=mySerial.read();
+          Serial.println(serialRX); }
+        App(serialRX);
             //ecranOLED.println("BT Disponible");
-          } 
+          
             //else{ecranOLED.println("BT Non Disponible");}
 
             // stocker la valeur reçue dans la variable serialRX
 
-        }    
+          
     }
-    page=0;
-    delay(500);
-    } 
-    }                                
-  }
-}
+    if(!digitalRead (Switch) && millis()-lastDebounceTime>=debounceDelay  && page==1){ 
+      lastDebounceTime=millis();
+      page=0;}  
+    }                                 
+  
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////
