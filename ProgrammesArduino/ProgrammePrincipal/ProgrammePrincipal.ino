@@ -323,22 +323,22 @@ void loop()  // run over and over again
 //////////////////////////////////// BLUETOOTH ////////////////////////////////////////
 
 
-void App(int serialRX){
+void App(byte serialRX){
 switch (serialRX) {
             case(1): // si arduino reçois le chiffre 1 alors envoi de la position du potentiomètre
-              Serial.println(1); 
+              Serial.write(1); 
               break;
             case(2): // si arduino reçois le chiffre 2 alors envoi de la tension en sortie de l'amplificateur sur 256 bits (1octet)
-              mySerial.println(map(analogRead(ampliPin),0,1024,0,255));
+              mySerial.write((byte)map(analogRead(ampliPin),0,1024,0,255));
               break;
             case(3): // si arduino reçois le chiffre 3 alors incrément de la position du potentiomètre
               setPotWiper(pot0,pos++);
-              mySerial.println(pos);
+              mySerial.write((byte)pos);
               Serial.println(3);
              break; 
             case(4): // si arduino reçois le chiffre 4 alors décrément de la position du potentiomètre
               setPotWiper(pot0,pos--);
-              mySerial.println(pos); 
+              mySerial.write((byte)pos); 
               Serial.println(4);
               break;
               }
