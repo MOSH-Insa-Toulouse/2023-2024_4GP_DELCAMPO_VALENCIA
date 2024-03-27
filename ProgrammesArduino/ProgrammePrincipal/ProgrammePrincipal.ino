@@ -42,6 +42,7 @@ volatile unsigned int encoder0Pos = 0;
 int lignecursor = 1;
 int n=0;
 int page=0;
+float R,Vflex,Rpot;
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -259,17 +260,17 @@ void loop()  // run over and over again
       case(1):                        //Menu de affichage de tension
         while(digitalRead (Switch))
         {
-    
-          float Tension = getVoltage(ampliPin);//getting the voltage reading from the temperature sensor
+          Rpot= setPotWiper(pot0,pos);
+          R = ((100000+Rpot)*5/getVoltage(ampliPin))-110000;//getting the voltage reading from the temperature sensor
           float VFlex = getVoltage(flexSensorPin);
           ecranOLED.clearDisplay(); 
           ecranOLED.setTextSize(2);
           ecranOLED.setCursor(0, 0);  
-          ecranOLED.println(Tension);
+          ecranOLED.println(R);
           ecranOLED.println(VFlex);
           ecranOLED.display();  
         
-          Serial.println(Tension);
+          Serial.println(R);
           Serial.println(VFlex);                     //printing the result
           delay(100);
           
@@ -280,7 +281,7 @@ void loop()  // run over and over again
         while(digitalRead (Switch))
         {
     
-          float Rpot = setPotWiper(pot0, pos);//prennant valeur du potentiomètre
+          Rpot = setPotWiper(pot0, pos);//prennant valeur du potentiomètre
           ecranOLED.clearDisplay(); 
           ecranOLED.setTextSize(2);
           ecranOLED.setCursor(0, 0);  
@@ -328,7 +329,8 @@ void loop()  // run over and over again
 void App(byte serialRX){
 switch (serialRX) {
             case(1): // si arduino reçois le chiffre 1 alors envoi de la position du potentiomètre
-              Serial.write(1); 
+              mySerial.write(pos); 
+              Serial.println(pos);
               break;
             case(2): // si arduino reçois le chiffre 2 alors envoi de la tension en sortie de l'amplificateur sur 256 bits (1octet)
               mySerial.write((byte)map(analogRead(ampliPin),0,1024,0,255));
