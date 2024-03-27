@@ -1,4 +1,4 @@
-﻿# **Projet Capteur**
+# **Projet Capteur**
 
 ## Introduction 
 
@@ -57,7 +57,7 @@ Les livrables pour ce projet sont :
 
 ## Datasheet
 
-## Problèmes rencontrés et améliorations à réaliser
+## Problèmes et améliorations
 
 ## Remerciements et contacts
 
